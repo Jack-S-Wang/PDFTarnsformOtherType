@@ -1,0 +1,28 @@
+﻿<Window x:Class="PDFTransform.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PDFTransform"
+        xmlns:myContorl="clr-namespace:PDFTransform"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="200" Width="800" ResizeMode="NoResize">
+    <Grid Margin="0,0,0,0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="673*"/>
+            <ColumnDefinition Width="119*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Margin="12,10,0,2" RenderTransformOrigin="0.499,0.159" Grid.ColumnSpan="2">
+            <TextBlock Text="导入PDF文件:" Width="100" Height="30"  Margin="10,16,670,111" RenderTransformOrigin="0.48,0.433" />
+            <TextBox x:Name="txb_FileName" Margin="110,10,85,111" TextAlignment="Left" RenderTransformOrigin="0.248,0.45" />
+            <Button x:Name="btn_Add" Content="添加" Click="Btn_Add_Click" Height="25" Width="80"  Margin="20,43,602,5"/>
+            <Button x:Name="btn_tarsform" Content="转换" Click="Btn_tarsform_Click" Height="25" Width="80" Margin="120,43,502,5"/>
+            <ComboBox x:Name="cob_Format" Width="150" Height="25" Margin="220,43,332,5" />
+            <myContorl:MyProgressBar x:Name="progressSpeed" Margin="390,43,112,5" Height="25" Width="200"/>
+            <CheckBox x:Name="checkSave" IsChecked="True" Click="CheckSave_Click" Content="是否保存到文件里" Margin="649,88,10,49" Height="20"/>
+        </Grid>
+    </Grid>
+</Window>
